@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - "node"
+  - "9"
 addons:
   chrome: stable
-
 before_install:
   - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip
     -P ~/
@@ -12,10 +11,6 @@ before_install:
   - sudo mv -f ~/chromedriver /usr/local/share/
   - sudo chmod +x /usr/local/share/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-install:
-  - yarn install
-script:
-  - yarn test
 after_success:
   - echo "success"
 after_failure:
