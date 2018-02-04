@@ -31,7 +31,13 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
-        acceptSslCerts: true
+        acceptSslCerts: true,
+        chromeOptions: {
+          args: [
+            'headless',
+            'window-size=1280,800'
+          ]
+        }
       }
     }
 
